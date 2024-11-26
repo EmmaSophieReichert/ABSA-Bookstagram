@@ -1,0 +1,19 @@
+"Ich möchte eine aspektbasierte Stimmungsanalyse von deutschen Buchrezensionen durchführen. Dazu soll die Rezension auf die Aspekte Autor, Schreibstil, externe Merkmale des Buchs, Charakter, Logik, Handlung und Allgemeines Sentiment überprüft werden.
+Autor: Untersuche, wie der Autor in der Rezension dargestellt wird und ob seine Perspektive oder Reputation das Sentiment beeinflusst. Beachte dabei, dass der Autor möglicherweise namentlich erwähnt wird oder indirekt durch Formulierungen wie 'der/die Schriftsteller/in', 'der/die Verfasser/in' oder 'der/die Autor/in'. Wird der Autor weder namentlich noch indirekt genannt, ist er als 'Nicht vorhanden' zu bewerten. Der Ausdruck von Dankbarkeit für das Rezensionsexemplar gegenüber dem Verlag oder gegenüber dem Autor hat keinen Einfluss auf das Sentiment.
+Schreibstil: Analysiere die Bewertung des Schreibstils und seine Eignung für das Buch. Berücksichtige dabei, wie der Schreibstil das sentimentale Feedback beeinflusst. Werden keine klaren Hinweise auf die Bewertung des Schreibstils gegeben, ist das Sentiment mit 'Nicht vorhanden' zu bewerten.
+Externe Merkmale des Buchs: Betrachte visuelle Aspekte wie Cover-Design, Schriftgröße, Layout, Fotos und Illustrationen, die das Lesevergnügen und damit das Sentiment beeinflussen können. Werden keine expliziten Angaben zu den visuellen Aspekten gemacht, ist das Sentiment mit 'Nicht vorhanden' zu bewerten.
+Charaktere: Analysiere die Charaktereigenschaften und -entwicklung, da sie das Sentiment beeinflussen können. Beachte dabei, dass negative Charaktereigenschaften bei Antagonisten nicht auf ein negatives Sentiment schließen lassen. Sind keine expliziten Aussagen zu den Charakteren im Text vorhanden, ist das Sentiment mit 'Nicht vorhanden' zu bewerten.
+Logik: Bewerte die Kohärenz und Logik des Buchs, um etwaige Inkonsistenzen oder logische Fehler zu identifizieren, die das Sentiment negativ beeinflussen könnten. Nachvollziehbarkeit oder Authentizität der Handlung oder der Charaktere weisen auf ein positives Sentiment hin. Sind weder positive noch negative Hinweise bezüglich der Logik des Buchs im Text enthalten, ist das Sentiment mit 'Nicht vorhanden' zu bewerten. 
+Handlung: Bewerte die Darstellung und Entwicklung der Handlung, einschließlich Spannungsaufbau und Auflösung, und deren Einfluss auf das sentimentale Feedback. Stark vorhersehbare Handlungen wirken sich negativ auf das Sentiment aus.
+Allgemeines Sentiment: Fasse das allgemeine Sentiment der Buchrezension zusammen, basierend auf der Analyse der oben genannten Aspekte und zusätzlicher Bewertungskriterien.
+Das Sentiment kann entweder positiv ("Positiv"), negativ ("Negativ"), neutral ("Neutral") oder nicht vorhanden ("Nicht vorhanden") sein. Neutral bedeutet auch, dass positive und negative Erwähnungen sich ausgleichen. Wenn im Text unzureichende Informationen vorliegen, um das Sentiment für einen Aspekt zu bestimmen, sollte "Nicht vorhanden" für diesen Aspekt zurückgegeben werden. Es ist besser, "Nicht vorhanden" zurückzugeben als eine ungenaue Bewertung. Als Ergebnis soll ein JSON ausgegeben werden, dass die Bewertung des Sentiments jedes Aspekts beinhaltet. Das JSON soll folgende Form haben:
+{
+    "author":  ,
+    "writing":  ,
+    "external":  ,
+    "characters":  ,
+    "logic":  ,
+    "plot":  ,
+    "overall_sentiment":  ,
+}
+Darüber hinaus ist festzustellen, ob es sich bei dem Buch um ein Rezensionsexemplar für den Leser handelt, oder ob er es selbst gekauft hat. Dieser Wert "review_copy" muss den Wert true oder false haben. Füge ihn in die JSON-Datei ein."
