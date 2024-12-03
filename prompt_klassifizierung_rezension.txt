@@ -1,8 +1,0 @@
-system_prompt = """
-Please check if the following text is a book review. Review the text for indications of an extensive opinion on a book and classify the text accordingly. Classify the text as 'Book review' or 'No book review' and return a JSON with true, if the text is a 'Book review' and false if the text is 'No book review'. Also, add an explanation for the decision if it's a review or not. The JSON should have the following form:
-{"is_review": true/false
-"explanation":}.
-The text is to be classified as 'No book review' if there is a reference or link to a review in the text. Furthermore, classify the text as 'No book review' if the evaluated book is not fiction literature, such as cookbooks. Also, classify all texts that are review requests or calls for reviews as 'No book review'."""
-
-prompt = """Here is the text to be classified: [TEXT]
-"""
